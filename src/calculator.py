@@ -1,4 +1,5 @@
 # src/calculator.py
+
 """
 Módulo calculator con operaciones matemáticas básicas.
 """

@@ -1,4 +1,5 @@
 # tests/test_calculator.py
+
 """
 Test para la función suma.
 Este es el primer test siguiendo TDD - ciclo RED.
