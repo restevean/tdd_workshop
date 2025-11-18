@@ -41,3 +41,8 @@ include = '\.pyi?$'
 [tool.isort]
 profile = "black"
 line_length = 88
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.4.0",
+]
