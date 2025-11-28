@@ -19,7 +19,7 @@ def test_add_two_positive_numbers() -> None:
     # Arrange (Preparar)
     number_a = 2
     number_b = 3
-    expected_result = 5
+    expected_result = 6
 
     # Assert (Afirmar)
     assert expected_result == add(number_a, number_b)
