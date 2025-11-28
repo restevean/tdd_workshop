@@ -13,7 +13,7 @@ El sistema convierte notas numéricas (0-10) a calificaciones:
 from src.grading_system import grade_score
 
 
-def test_grade_score_sobresaliente():
+def test_grade_score_sobresaliente() -> None:
     """
     Test que verifica que una nota de 9.5 se clasifica como Sobresaliente y aprueba.
 
@@ -34,7 +34,7 @@ def test_grade_score_sobresaliente():
     assert passed == expected_passed
 
 
-def test_grade_score_notable():
+def test_grade_score_notable() -> None:
     """
     Test que verifica que una nota de 8.0 se clasifica como Notable y aprueba.
 
@@ -55,7 +55,7 @@ def test_grade_score_notable():
     assert passed == expected_passed
 
 
-def test_grade_score_bien():
+def test_grade_score_bien() -> None:
     """
     Test que verifica que una nota de 6.5 se clasifica como Bien y aprueba.
 
@@ -76,7 +76,7 @@ def test_grade_score_bien():
     assert passed == expected_passed
 
 
-def test_grade_score_suficiente():
+def test_grade_score_suficiente() -> None:
     """
     Test que verifica que una nota de 5.5 se clasifica como Suficiente y aprueba.
 
@@ -97,7 +97,7 @@ def test_grade_score_suficiente():
     assert passed == expected_passed
 
 
-def test_grade_score_insuficiente():
+def test_grade_score_insuficiente() -> None:
     """
     Test que verifica que una nota de 4.0 se clasifica como Insuficiente y no aprueba.
 
@@ -118,7 +118,7 @@ def test_grade_score_insuficiente():
     assert passed == expected_passed
 
 
-def test_grade_score_muy_deficiente():
+def test_grade_score_muy_deficiente() -> None:
     """
     Test que verifica que una nota de 2.0 se clasifica como Muy deficiente y no aprueba.
 
@@ -139,7 +139,7 @@ def test_grade_score_muy_deficiente():
     assert passed == expected_passed
 
 
-def test_grade_score_limite_sobresaliente():
+def test_grade_score_limite_sobresaliente() -> None:
     """
     Test que verifica el límite inferior del Sobresaliente (exactamente 9.0).
 
@@ -160,7 +160,7 @@ def test_grade_score_limite_sobresaliente():
     assert passed == expected_passed
 
 
-def test_grade_score_limite_notable():
+def test_grade_score_limite_notable() -> None:
     """
     Test que verifica el límite inferior del Notable (exactamente 7.0).
 
@@ -181,7 +181,7 @@ def test_grade_score_limite_notable():
     assert passed == expected_passed
 
 
-def test_grade_score_limite_bien():
+def test_grade_score_limite_bien() -> None:
     """
     Test que verifica el límite inferior del Bien (exactamente 6.0).
 
@@ -202,7 +202,7 @@ def test_grade_score_limite_bien():
     assert passed == expected_passed
 
 
-def test_grade_score_limite_aprobado():
+def test_grade_score_limite_aprobado() -> None:
     """
     Test que verifica el límite mínimo para aprobar (exactamente 5.0).
 
@@ -223,7 +223,7 @@ def test_grade_score_limite_aprobado():
     assert passed == expected_passed
 
 
-def test_grade_score_limite_insuficiente():
+def test_grade_score_limite_insuficiente() -> None:
     """
     Test que verifica el límite superior del Insuficiente (4.99).
 
@@ -244,7 +244,7 @@ def test_grade_score_limite_insuficiente():
     assert passed == expected_passed
 
 
-def test_grade_score_nota_perfecta():
+def test_grade_score_nota_perfecta() -> None:
     """
     Test que verifica la nota máxima (10.0).
 
@@ -265,7 +265,7 @@ def test_grade_score_nota_perfecta():
     assert passed == expected_passed
 
 
-def test_grade_score_nota_minima():
+def test_grade_score_nota_minima() -> None:
     """
     Test que verifica la nota mínima (0.0).
 

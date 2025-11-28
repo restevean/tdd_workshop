@@ -6,7 +6,7 @@ Clasifica notas numéricas (0-10) según el sistema español.
 """
 
 
-def grade_score(score):
+def grade_score(score: float) -> tuple:
     """
     Clasifica una nota numérica según el sistema de calificación español.
 

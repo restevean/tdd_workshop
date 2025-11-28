@@ -4,8 +4,8 @@
 Test que siempre pasa para verificar que el entorno de testing funciona.
 """
 
-import pytest
+# import pytest
 
 
-def test_always_passes():
+def test_always_passes() -> None:
     assert True

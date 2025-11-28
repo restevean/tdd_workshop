@@ -12,7 +12,7 @@ Una contraseña válida debe cumplir:
 from src.password_validator import validate_password
 
 
-def test_password_too_short():
+def test_password_too_short() -> None:
     """
     Test que verifica que una contraseña con menos de 8 caracteres es inválida.
 
@@ -30,7 +30,7 @@ def test_password_too_short():
     assert result is False
 
 
-def test_password_valid_with_all_requirements():
+def test_password_valid_with_all_requirements() -> None:
     """
     Test que verifica que una contraseña que cumple todos los requisitos es válida.
 
@@ -48,7 +48,7 @@ def test_password_valid_with_all_requirements():
     assert result is True
 
 
-def test_password_without_uppercase():
+def test_password_without_uppercase() -> None:
     """
     Test que verifica que una contraseña sin letra mayúscula es inválida.
 
@@ -66,7 +66,7 @@ def test_password_without_uppercase():
     assert result is False
 
 
-def test_password_without_lowercase():
+def test_password_without_lowercase() -> None:
     """
     Test que verifica que una contraseña sin letra minúscula es inválida.
 
@@ -84,7 +84,7 @@ def test_password_without_lowercase():
     assert result is False
 
 
-def test_password_without_digit():
+def test_password_without_digit() -> None:
     """
     Test que verifica que una contraseña sin dígitos es inválida.
 
@@ -102,7 +102,7 @@ def test_password_without_digit():
     assert result is False
 
 
-def test_password_without_special_character():
+def test_password_without_special_character() -> None:
     """
     Test que verifica que una contraseña sin carácter especial es inválida.
 
@@ -120,7 +120,7 @@ def test_password_without_special_character():
     assert result is False
 
 
-def test_password_exactly_8_characters():
+def test_password_exactly_8_characters() -> None:
     """
     Test que verifica que una contraseña de exactamente 8 caracteres es válida.
 
@@ -138,7 +138,7 @@ def test_password_exactly_8_characters():
     assert result is True
 
 
-def test_password_empty():
+def test_password_empty() -> None:
     """
     Test que verifica que una contraseña vacía es inválida.
 
@@ -156,7 +156,7 @@ def test_password_empty():
     assert result is False
 
 
-def test_password_with_multiple_special_characters():
+def test_password_with_multiple_special_characters() -> None:
     """
     Test que verifica que una contraseña con varios caracteres especiales es válida.
 

@@ -15,7 +15,7 @@ DIGIT_PATTERN = r"\d"
 SPECIAL_CHAR_PATTERN = r"[!@#$%^&*]"
 
 
-def validate_password(password):
+def validate_password(password: str) -> bool:
     """
     Valida que una contraseña cumpla con todos los requisitos de seguridad.
 

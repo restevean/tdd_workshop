@@ -8,7 +8,7 @@ Este es el primer test siguiendo TDD - ciclo RED.
 from src.calculator import add
 
 
-def test_add_two_positive_numbers():
+def test_add_two_positive_numbers() -> None:
     """
     Test que verifica que la función add suma correctamente dos números positivos.
 
@@ -25,7 +25,7 @@ def test_add_two_positive_numbers():
     assert expected_result == add(number_a, number_b)
 
 
-def test_add_negative_numbers():
+def test_add_negative_numbers() -> None:
     """
     Test que verifica que la función add suma correctamente dos números negativos.
 
@@ -45,7 +45,7 @@ def test_add_negative_numbers():
     assert result == expected_result
 
 
-def test_add_positive_and_negative():
+def test_add_positive_and_negative() -> None:
     """
     Test que verifica que la función add suma un número positivo y uno negativo.
 
@@ -65,7 +65,7 @@ def test_add_positive_and_negative():
     assert result == expected_result
 
 
-def test_add_with_zero():
+def test_add_with_zero() -> None:
     """
     Test que verifica que la función add suma correctamente cuando uno de los números es cero.
 
@@ -85,7 +85,7 @@ def test_add_with_zero():
     assert result == expected_result
 
 
-def test_add_decimal_numbers():
+def test_add_decimal_numbers() -> None:
     """
     Test que verifica que la función add suma correctamente números decimales.
 

@@ -5,7 +5,7 @@ Módulo calculator con operaciones matemáticas básicas.
 """
 
 
-def add(a, b):
+def add(a: float, b: float) -> float:
     """
     Suma dos números.
 
