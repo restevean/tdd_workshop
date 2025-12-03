@@ -1,13 +1,4 @@
 # tests/test_password_validator.py
-"""
-Tests para el validador de contraseñas.
-Una contraseña válida debe cumplir:
-- Al menos 8 caracteres
-- Al menos una letra mayúscula
-- Al menos una letra minúscula
-- Al menos un dígito
-- Al menos un carácter especial (!@#$%^&*)
-"""
 
 from src.password_validator import validate_password
 
@@ -34,8 +25,8 @@ def test_password_valid_with_all_requirements() -> None:
     """
     Test que verifica que una contraseña que cumple todos los requisitos es válida.
 
-    Dado: Una contraseña "Abc12345!" que cumple todos los requisitos
-    Cuando: Validamos la contraseña
+    Dado: Una contraseña "Abc12345!" que cumple todos los requisitos.
+    Cuando: Validamos la contraseña.
     Entonces: El resultado debe ser True
     """
     # Arrange
