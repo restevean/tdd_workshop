@@ -1,4 +1,3 @@
-# tests/test_grading_system.py
 """
 Tests para el sistema de calificaciones académicas.
 El sistema convierte notas numéricas (0-10) a calificaciones:

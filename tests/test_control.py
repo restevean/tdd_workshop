@@ -1,5 +1,3 @@
-# tests/control.py
-
 """
 Test que siempre pasa para verificar que el entorno de testing funciona.
 """

@@ -1,9 +1,4 @@
-# src/password_validator.py
-
-"""
-Módulo de validación de contraseñas.
-Verifica que las contraseñas cumplan con requisitos de seguridad.
-"""
+"""Validación de contraseñas con requisitos de seguridad."""
 
 import re
 

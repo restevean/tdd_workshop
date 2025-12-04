@@ -1,5 +1,3 @@
-# src/grading_system.py
-
 """
 Módulo de sistema de calificaciones académicas.
 Clasifica notas numéricas (0-10) según el sistema español.

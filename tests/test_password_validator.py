@@ -1,5 +1,3 @@
-# tests/test_password_validator.py
-
 from src.password_validator import validate_password
 
 

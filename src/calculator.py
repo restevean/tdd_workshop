@@ -1,19 +1,15 @@
-# src/calculator.py
-
-"""
-Módulo calculator con operaciones matemáticas básicas.
-"""
+"""Operaciones matemáticas básicas."""
 
 
 def add(a: float, b: float) -> float:
     """
-    Suma dos números.
+    Sum both received values.
 
     Args:
-        a: Primer número
-        b: Segundo número
+        a (float): first value to sum
+        b (float): second value to sum
 
     Returns:
-        La suma de a y b
+        a + b (float): sum result
     """
     return a + b
