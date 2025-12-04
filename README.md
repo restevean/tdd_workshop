@@ -125,11 +125,11 @@ Ciclo con TDD (el que usaste):
   Ejemplo real del proyecto:
 
   La función grade_score tiene 14 tests que cubren:
-  - ✅ Cada categoría de calificación
-  - ✅ Límites entre categorías (edge cases)
-  - ✅ Nota mínima (0.0)
-  - ✅ Nota máxima (10.0)
-  - ✅ Estado de aprobado/desaprobado
+  - Cada categoría de calificación
+  - Límites entre categorías (edge cases)
+  - Nota mínima (0.0)
+  - Nota máxima (10.0)
+  - Estado de aprobado/desaprobado
 
   Sin TDD: Probablemente habrías olvidado testear:
   - El límite de 4.99 (Insuficiente)
