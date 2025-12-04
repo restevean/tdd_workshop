@@ -160,3 +160,17 @@ uv add --dev pytest-cov
 Ejecutamos los tests (con "uv run" si el entorno virtual no está activado y sin ello si está activado) con la opción de cobertura:
 ```bash
 uv run pytest --cov=src
+```
+Está incluida la modificación también en .pre-commit-config.yaml para que se ejecute automáticamente antes de cada push:
+```yaml
+  - repo: local
+    hooks:
+      - id: run-tests
+        name: Launch tests using pytest before push
+        entry: bash -c "PYTHONPATH=. uv run pytest --tb=short -v --cov=src --cov-report=term-missing"
+        language: system
+        pass_filenames: false
+        stages: [ pre-push ]
+        always_run: true
+        verbose: true
+```
