@@ -32,7 +32,7 @@ repos:
     hooks:
       - id: run-tests
         name: Launch tests using pytest before push
-        entry: bash -c "PYTHONPATH=. uv run pytest --tb=short -v"
+        entry: bash -c "PYTHONPATH=. uv run pytest --tb=short -v --cov=src --cov-report=term-missing"
         language: system
         pass_filenames: false
         stages: [ pre-push ]
