@@ -1,5 +1,5 @@
 """
-Academic grading system module.
+Academic grading system module - Written WITH TDD.
 Classifies numerical marks (0-10) according to the Spanish grading system.
 """
 
@@ -43,3 +43,11 @@ def grade_score(score: float) -> tuple:
     passed = score >= 5.0
 
     return grade, passed
+
+
+# VENTAJAS:
+# - Simple: Solo lo necesario
+# - Claro: Fácil de entender
+# - Testeado: 14 tests lo validan
+# - Sin código muerto: Todo se usa
+# - Confianza: Sabemos que funciona

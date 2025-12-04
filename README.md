@@ -11,9 +11,7 @@ Taller práctico de Test-Driven Development (TDD) con Python.
 
 ## Requisitos
 
-- macOS Tahoe 26.1
 - Python 3.12
-- PyCharm (última versión)
 - UV (gestor de dependencias)
 
 ## Setup del proyecto
@@ -87,3 +85,78 @@ uv run pre-commit run --all-files
 ## Ejercicios
 
 Los ejercicios se irán añadiendo progresivamente durante el taller.
+
+## Ejemplo que ilustra un las diferencias entre un código escrito con TDD y otro sin TDD
+
+### Código sin TDD
+/src/grading_system.py
+### Código con TDD
+/src/grading_system_no_tdd.py
+
+### Comparación visual:
+
+  | Aspecto          | Sin TDD       | Con TDD      |
+  |------------------|---------------|--------------|
+  | Líneas de código | ~40           | ~15          |
+  | Complejidad      | Alta          | Baja         |
+  | Tests escritos   | 0 (o después) | 14 (primero) |
+  | Bugs conocidos   | Desconocidos  | 0            |
+  | Mantenibilidad   | Difícil       | Fácil        |
+  | Confianza        | Baja          | Alta         |
+
+  El ciclo TDD que evita esto:
+
+  Ciclo típico SIN TDD:
+
+  1. Escribir código (con suposiciones)
+  2. "Creo que funciona"
+  3. Integrar
+  4. Bug en producción
+  5. "¿Por qué no lo testeamos antes?"
+
+Ciclo con TDD (el que usaste):
+
+  1. RED: Test falla → test_grade_score_sobresaliente()
+  2. GREEN: Código mínimo → if score >= 9.0: grade = "Sobresaliente"
+  3. REFACTOR: Mejorar sin romper tests
+  4. Repetir
+  5. Código simple, testeado y funcional
+
+  Ejemplo real del proyecto:
+
+  La función grade_score tiene 14 tests que cubren:
+  - ✅ Cada categoría de calificación
+  - ✅ Límites entre categorías (edge cases)
+  - ✅ Nota mínima (0.0)
+  - ✅ Nota máxima (10.0)
+  - ✅ Estado de aprobado/desaprobado
+
+  Sin TDD: Probablemente habrías olvidado testear:
+  - El límite de 4.99 (Insuficiente)
+  - El límite exacto de 5.0 (aprobado justo)
+  - El límite exacto de 9.0 (Sobresaliente)
+
+ ### Conclusión:
+
+  Sin TDD:
+  - Código complejo "por si acaso"
+  - Features no solicitadas
+  - Bugs ocultos
+  - Difícil de cambiar
+
+  Con TDD:
+  - Código simple y directo
+  - Solo lo necesario
+  - Bugs detectados inmediatamente
+  - Fácil de cambiar (refactoring seguro)
+
+  TDD te fuerza a escribir código simple que resuelve el problema real, no el problema imaginario.
+
+## Informe de la cobertura de los tests
+Instalamos un paquete adicional si no está ya incluido en las dependencias de desarrollo:
+```bash
+uv add --dev pytest-cov
+```
+Ejecutamos los tests (con "uv run" si el entorno virtual no está activado y sin ello si está activado) con la opción de cobertura:
+```bash
+uv run pytest --cov=src

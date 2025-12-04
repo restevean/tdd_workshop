@@ -1,12 +1,12 @@
 """
 Tests for the academic grading system.
 The system converts numeric scores (0-10) to grades:
-- 9-10: Outstanding
+- 9-10: Sobresaliente
 - 7-8.99: Notable
-- 6-6.99: Good
-- 5-5.99: Sufficient
-- 3-4.99: Insufficient
-- 0-2.99: Very poor
+- 6-6.99: Bien
+- 5-5.99: Suficiente
+- 3-4.99: Insuficiente
+- 0-2.99: Muy deficiente
 """
 
 from src.grading_system import grade_score
@@ -105,7 +105,7 @@ def test_grade_score_insuficiente() -> None:
     Then: It should return ("Insuficiente", False)
     """
     # Arrange
-    score = 4.0
+    score = 4.99
     expected_grade = "Insuficiente"
     expected_passed = False
 
