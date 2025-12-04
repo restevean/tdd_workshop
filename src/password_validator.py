@@ -1,8 +1,8 @@
-"""Validación de contraseñas con requisitos de seguridad."""
+"""Password validation with security requirements."""
 
 import re
 
-# Constantes para los patrones de validación
+# Constants for validation patterns
 MIN_LENGTH = 8
 UPPERCASE_PATTERN = r"[A-Z]"
 LOWERCASE_PATTERN = r"[a-z]"
@@ -12,40 +12,40 @@ SPECIAL_CHAR_PATTERN = r"[!@#$%^&*]"
 
 def validate_password(password: str) -> bool:
     """
-    Valida que una contraseña cumpla con todos los requisitos de seguridad.
+    Validate that a password meets all security requirements.
 
-    Requisitos:
-    - Al menos 8 caracteres de longitud
-    - Al menos una letra mayúscula
-    - Al menos una letra minúscula
-    - Al menos un dígito
-    - Al menos un carácter especial (!@#$%^&*)
+    Requirements:
+    - At least 8 characters in length
+    - At least one uppercase letter
+    - At least one lowercase letter
+    - At least one digit
+    - At least one special character (!@#$%^&*)
 
     Args:
-        password (str): La contraseña a validar
+        password (str): The password to validate
 
     Returns:
-        bool: True si la contraseña es válida, False en caso contrario
+        bool: True if the password is valid, False otherwise
     """
-    # Verificar longitud mínima
+    # Check minimum length
     if len(password) < MIN_LENGTH:
         return False
 
-    # Verificar que contenga al menos una letra mayúscula
+    # Check for at least one uppercase letter
     if not re.search(UPPERCASE_PATTERN, password):
         return False
 
-    # Verificar que contenga al menos una letra minúscula
+    # Check for at least one lowercase letter
     if not re.search(LOWERCASE_PATTERN, password):
         return False
 
-    # Verificar que contenga al menos un dígito
+    # Check for at least one digit
     if not re.search(DIGIT_PATTERN, password):
         return False
 
-    # Verificar que contenga al menos un carácter especial
+    # Check for at least one special character
     if not re.search(SPECIAL_CHAR_PATTERN, password):
         return False
 
-    # Si pasa todas las validaciones, la contraseña es válida
+    # If all validations pass, the password is valid
     return True

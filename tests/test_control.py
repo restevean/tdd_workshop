@@ -1,5 +1,5 @@
 """
-Test que siempre pasa para verificar que el entorno de testing funciona.
+Test that always passes to verify that the testing environment works.
 """
 
 # import pytest

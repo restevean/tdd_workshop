@@ -1,6 +1,6 @@
 """
-Test para la función suma.
-Este es el primer test siguiendo TDD - ciclo RED.
+Test for the sum function.
+This is the first test following TDD - RED cycle.
 """
 
 from src.calculator import add
@@ -8,28 +8,28 @@ from src.calculator import add
 
 def test_add_two_positive_numbers() -> None:
     """
-    Test que verifica que la función add suma correctamente dos números positivos.
+    Test that verifies the add function correctly sums two positive numbers.
 
-    Dado: Dos números positivos (2 y 3)
-    Cuando: Los sumamos usando la función add
-    Entonces: El resultado debe ser 5
+    Given: Two positive numbers (2 and 3)
+    When: We sum them using the add function
+    Then: The result should be 5
     """
-    # Arrange (Preparar)
+    # Arrange
     number_a = 2
     number_b = 3
     expected_result = 5
 
-    # Assert (Afirmar)
+    # Assert
     assert expected_result == add(number_a, number_b)
 
 
 def test_add_negative_numbers() -> None:
     """
-    Test que verifica que la función add suma correctamente dos números negativos.
+    Test that verifies the add function correctly sums two negative numbers.
 
-    Dado: Dos números negativos (-5 y -3)
-    Cuando: Los sumamos usando la función add
-    Entonces: El resultado debe ser -8
+    Given: Two negative numbers (-5 and -3)
+    When: We sum them using the add function
+    Then: The result should be -8
     """
     # Arrange
     number_a = -5
@@ -45,11 +45,11 @@ def test_add_negative_numbers() -> None:
 
 def test_add_positive_and_negative() -> None:
     """
-    Test que verifica que la función add suma un número positivo y uno negativo.
+    Test that verifies the add function sums a positive and a negative number.
 
-    Dado: Un número positivo (10) y uno negativo (-3)
-    Cuando: Los sumamos usando la función add
-    Entonces: El resultado debe ser 7
+    Given: A positive number (10) and a negative number (-3)
+    When: We sum them using the add function
+    Then: The result should be 7
     """
     # Arrange
     number_a = 10
@@ -65,11 +65,11 @@ def test_add_positive_and_negative() -> None:
 
 def test_add_with_zero() -> None:
     """
-    Test que verifica que la función add suma correctamente cuando uno de los números es cero.
+    Test that verifies the add function correctly sums when one of the numbers is zero.
 
-    Dado: Un número (5) y cero (0)
-    Cuando: Los sumamos usando la función add
-    Entonces: El resultado debe ser 5
+    Given: A number (5) and zero (0)
+    When: We sum them using the add function
+    Then: The result should be 5
     """
     # Arrange
     number_a = 5
@@ -85,11 +85,11 @@ def test_add_with_zero() -> None:
 
 def test_add_decimal_numbers() -> None:
     """
-    Test que verifica que la función add suma correctamente números decimales.
+    Test that verifies the add function correctly sums decimal numbers.
 
-    Dado: Dos números decimales (2.5 y 3.7)
-    Cuando: Los sumamos usando la función add
-    Entonces: El resultado debe ser 6.2
+    Given: Two decimal numbers (2.5 and 3.7)
+    When: We sum them using the add function
+    Then: The result should be 6.2
     """
     # Arrange
     number_a = 2.5

@@ -1,12 +1,12 @@
 """
-Tests para el sistema de calificaciones académicas.
-El sistema convierte notas numéricas (0-10) a calificaciones:
-- 9-10: Sobresaliente
+Tests for the academic grading system.
+The system converts numeric scores (0-10) to grades:
+- 9-10: Outstanding
 - 7-8.99: Notable
-- 6-6.99: Bien
-- 5-5.99: Suficiente
-- 3-4.99: Insuficiente
-- 0-2.99: Muy deficiente
+- 6-6.99: Good
+- 5-5.99: Sufficient
+- 3-4.99: Insufficient
+- 0-2.99: Very poor
 """
 
 from src.grading_system import grade_score
@@ -14,11 +14,11 @@ from src.grading_system import grade_score
 
 def test_grade_score_sobresaliente() -> None:
     """
-    Test que verifica que una nota de 9.5 se clasifica como Sobresaliente y aprueba.
+    Test that verifies that a score of 9.5 is classified as Outstanding and passes.
 
-    Dado: Una nota de 9.5 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Sobresaliente", True)
+    Given: A score of 9.5 points
+    When: We classify the score
+    Then: It should return ("Sobresaliente", True)
     """
     # Arrange
     score = 9.5
@@ -35,11 +35,11 @@ def test_grade_score_sobresaliente() -> None:
 
 def test_grade_score_notable() -> None:
     """
-    Test que verifica que una nota de 8.0 se clasifica como Notable y aprueba.
+    Test that verifies that a score of 8.0 is classified as Notable and passes.
 
-    Dado: Una nota de 8.0 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Notable", True)
+    Given: A score of 8.0 points
+    When: We classify the score
+    Then: It should return ("Notable", True)
     """
     # Arrange
     score = 8.0
@@ -56,11 +56,11 @@ def test_grade_score_notable() -> None:
 
 def test_grade_score_bien() -> None:
     """
-    Test que verifica que una nota de 6.5 se clasifica como Bien y aprueba.
+    Test that verifies that a score of 6.5 is classified as Good and passes.
 
-    Dado: Una nota de 6.5 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Bien", True)
+    Given: A score of 6.5 points
+    When: We classify the score
+    Then: It should return ("Bien", True)
     """
     # Arrange
     score = 6.5
@@ -77,11 +77,11 @@ def test_grade_score_bien() -> None:
 
 def test_grade_score_suficiente() -> None:
     """
-    Test que verifica que una nota de 5.5 se clasifica como Suficiente y aprueba.
+    Test that verifies that a score of 5.5 is classified as Sufficient and passes.
 
-    Dado: Una nota de 5.5 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Suficiente", True)
+    Given: A score of 5.5 points
+    When: We classify the score
+    Then: It should return ("Suficiente", True)
     """
     # Arrange
     score = 5.5
@@ -98,11 +98,11 @@ def test_grade_score_suficiente() -> None:
 
 def test_grade_score_insuficiente() -> None:
     """
-    Test que verifica que una nota de 4.0 se clasifica como Insuficiente y no aprueba.
+    Test that verifies that a score of 4.0 is classified as Insufficient and does not pass.
 
-    Dado: Una nota de 4.0 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Insuficiente", False)
+    Given: A score of 4.0 points
+    When: We classify the score
+    Then: It should return ("Insuficiente", False)
     """
     # Arrange
     score = 4.0
@@ -119,11 +119,11 @@ def test_grade_score_insuficiente() -> None:
 
 def test_grade_score_muy_deficiente() -> None:
     """
-    Test que verifica que una nota de 2.0 se clasifica como Muy deficiente y no aprueba.
+    Test that verifies that a score of 2.0 is classified as Very poor and does not pass.
 
-    Dado: Una nota de 2.0 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Muy deficiente", False)
+    Given: A score of 2.0 points
+    When: We classify the score
+    Then: It should return ("Muy deficiente", False)
     """
     # Arrange
     score = 2.0
@@ -140,11 +140,11 @@ def test_grade_score_muy_deficiente() -> None:
 
 def test_grade_score_limite_sobresaliente() -> None:
     """
-    Test que verifica el límite inferior del Sobresaliente (exactamente 9.0).
+    Test that verifies the lower limit of Outstanding (exactly 9.0).
 
-    Dado: Una nota de 9.0 puntos (límite)
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Sobresaliente", True)
+    Given: A score of 9.0 points (limit)
+    When: We classify the score
+    Then: It should return ("Sobresaliente", True)
     """
     # Arrange
     score = 9.0
@@ -161,11 +161,11 @@ def test_grade_score_limite_sobresaliente() -> None:
 
 def test_grade_score_limite_notable() -> None:
     """
-    Test que verifica el límite inferior del Notable (exactamente 7.0).
+    Test that verifies the lower limit of Notable (exactly 7.0).
 
-    Dado: Una nota de 7.0 puntos (límite)
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Notable", True)
+    Given: A score of 7.0 points (limit)
+    When: We classify the score
+    Then: It should return ("Notable", True)
     """
     # Arrange
     score = 7.0
@@ -182,11 +182,11 @@ def test_grade_score_limite_notable() -> None:
 
 def test_grade_score_limite_bien() -> None:
     """
-    Test que verifica el límite inferior del Bien (exactamente 6.0).
+    Test that verifies the lower limit of Good (exactly 6.0).
 
-    Dado: Una nota de 6.0 puntos (límite)
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Bien", True)
+    Given: A score of 6.0 points (limit)
+    When: We classify the score
+    Then: It should return ("Bien", True)
     """
     # Arrange
     score = 6.0
@@ -203,11 +203,11 @@ def test_grade_score_limite_bien() -> None:
 
 def test_grade_score_limite_aprobado() -> None:
     """
-    Test que verifica el límite mínimo para aprobar (exactamente 5.0).
+    Test that verifies the minimum limit to pass (exactly 5.0).
 
-    Dado: Una nota de 5.0 puntos (aprobado justo)
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Suficiente", True)
+    Given: A score of 5.0 points (bare pass)
+    When: We classify the score
+    Then: It should return ("Suficiente", True)
     """
     # Arrange
     score = 5.0
@@ -224,11 +224,11 @@ def test_grade_score_limite_aprobado() -> None:
 
 def test_grade_score_limite_insuficiente() -> None:
     """
-    Test que verifica el límite superior del Insuficiente (4.99).
+    Test that verifies the upper limit of Insufficient (4.99).
 
-    Dado: Una nota de 4.99 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Insuficiente", False)
+    Given: A score of 4.99 points
+    When: We classify the score
+    Then: It should return ("Insuficiente", False)
     """
     # Arrange
     score = 4.99
@@ -245,11 +245,11 @@ def test_grade_score_limite_insuficiente() -> None:
 
 def test_grade_score_nota_perfecta() -> None:
     """
-    Test que verifica la nota máxima (10.0).
+    Test that verifies the maximum score (10.0).
 
-    Dado: Una nota de 10.0 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Sobresaliente", True)
+    Given: A score of 10.0 points
+    When: We classify the score
+    Then: It should return ("Sobresaliente", True)
     """
     # Arrange
     score = 10.0
@@ -266,11 +266,11 @@ def test_grade_score_nota_perfecta() -> None:
 
 def test_grade_score_nota_minima() -> None:
     """
-    Test que verifica la nota mínima (0.0).
+    Test that verifies the minimum score (0.0).
 
-    Dado: Una nota de 0.0 puntos
-    Cuando: Clasificamos la nota
-    Entonces: Debe devolver ("Muy deficiente", False)
+    Given: A score of 0.0 points
+    When: We classify the score
+    Then: It should return ("Muy deficiente", False)
     """
     # Arrange
     score = 0.0

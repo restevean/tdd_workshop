@@ -1,31 +1,31 @@
 """
-Módulo de sistema de calificaciones académicas.
-Clasifica notas numéricas (0-10) según el sistema español.
+Academic grading system module.
+Classifies numerical marks (0-10) according to the Spanish grading system.
 """
 
 
 def grade_score(score: float) -> tuple:
     """
-    Clasifica una nota numérica según el sistema de calificación español.
+    Classify a numerical mark according to the Spanish grading system.
 
-    Rangos de calificación:
-    - 9-10: Sobresaliente
-    - 7-8.99: Notable
-    - 6-6.99: Bien
-    - 5-5.99: Suficiente
-    - 3-4.99: Insuficiente
-    - 0-2.99: Muy deficiente
+    Grading ranges:
+    - 9-10: Sobresaliente (Outstanding)
+    - 7-8.99: Notable (Very Good)
+    - 6-6.99: Bien (Good)
+    - 5-5.99: Suficiente (Pass)
+    - 3-4.99: Insuficiente (Insufficient)
+    - 0-2.99: Muy deficiente (Very Poor)
 
     Args:
-        score (float): Nota numérica entre 0 y 10
+        score (float): Numerical mark between 0 and 10
 
     Returns:
-        tuple: (calificación, aprobado)
-            - calificación (str): Nombre de la calificación
-            - aprobado (bool): True si la nota es >= 5.0, False en caso contrario
+        tuple: (grade, passed)
+            - grade (str): Name of the grade
+            - passed (bool): True if the mark is >= 5.0, False otherwise
     """
 
-    # Determinar la calificación según el rango
+    # Determine the grade according to the range
     if score >= 9.0:
         grade = "Sobresaliente"
     elif score >= 7.0:
@@ -39,7 +39,7 @@ def grade_score(score: float) -> tuple:
     else:
         grade = "Muy deficiente"
 
-    # Determinar si aprueba (nota >= 5.0)
+    # Determine if passed (mark >= 5.0)
     passed = score >= 5.0
 
     return grade, passed

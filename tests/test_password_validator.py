@@ -3,11 +3,11 @@ from src.password_validator import validate_password
 
 def test_password_too_short() -> None:
     """
-    Test que verifica que una contraseña con menos de 8 caracteres es inválida.
+    Test that verifies that a password with fewer than 8 characters is invalid.
 
-    Dado: Una contraseña de 6 caracteres "Abc12!"
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser False
+    Given: A password of 6 characters "Abc12!"
+    When: We validate the password
+    Then: The result should be False
     """
     # Arrange
     password = "Abc12!"
@@ -21,11 +21,11 @@ def test_password_too_short() -> None:
 
 def test_password_valid_with_all_requirements() -> None:
     """
-    Test que verifica que una contraseña que cumple todos los requisitos es válida.
+    Test that verifies that a password that meets all requirements is valid.
 
-    Dado: Una contraseña "Abc12345!" que cumple todos los requisitos.
-    Cuando: Validamos la contraseña.
-    Entonces: El resultado debe ser True
+    Given: A password "Abc12345!" that meets all requirements.
+    When: We validate the password.
+    Then: The result should be True
     """
     # Arrange
     password = "Abc12345!"
@@ -39,11 +39,11 @@ def test_password_valid_with_all_requirements() -> None:
 
 def test_password_without_uppercase() -> None:
     """
-    Test que verifica que una contraseña sin letra mayúscula es inválida.
+    Test that verifies that a password without an uppercase letter is invalid.
 
-    Dado: Una contraseña "abc12345!" sin mayúsculas
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser False
+    Given: A password "abc12345!" without uppercase letters
+    When: We validate the password
+    Then: The result should be False
     """
     # Arrange
     password = "abc12345!"
@@ -57,11 +57,11 @@ def test_password_without_uppercase() -> None:
 
 def test_password_without_lowercase() -> None:
     """
-    Test que verifica que una contraseña sin letra minúscula es inválida.
+    Test that verifies that a password without a lowercase letter is invalid.
 
-    Dado: Una contraseña "ABC12345!" sin minúsculas
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser False
+    Given: A password "ABC12345!" without lowercase letters
+    When: We validate the password
+    Then: The result should be False
     """
     # Arrange
     password = "ABC12345!"
@@ -75,11 +75,11 @@ def test_password_without_lowercase() -> None:
 
 def test_password_without_digit() -> None:
     """
-    Test que verifica que una contraseña sin dígitos es inválida.
+    Test that verifies that a password without digits is invalid.
 
-    Dado: Una contraseña "Abcdefgh!" sin números
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser False
+    Given: A password "Abcdefgh!" without numbers
+    When: We validate the password
+    Then: The result should be False
     """
     # Arrange
     password = "Abcdefgh!"
@@ -93,11 +93,11 @@ def test_password_without_digit() -> None:
 
 def test_password_without_special_character() -> None:
     """
-    Test que verifica que una contraseña sin carácter especial es inválida.
+    Test that verifies that a password without a special character is invalid.
 
-    Dado: Una contraseña "Abc12345" sin caracteres especiales
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser False
+    Given: A password "Abc12345" without special characters
+    When: We validate the password
+    Then: The result should be False
     """
     # Arrange
     password = "Abc12345"
@@ -111,11 +111,11 @@ def test_password_without_special_character() -> None:
 
 def test_password_exactly_8_characters() -> None:
     """
-    Test que verifica que una contraseña de exactamente 8 caracteres es válida.
+    Test that verifies that a password of exactly 8 characters is valid.
 
-    Dado: Una contraseña "Abc1234!" de exactamente 8 caracteres
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser True
+    Given: A password "Abc1234!" of exactly 8 characters
+    When: We validate the password
+    Then: The result should be True
     """
     # Arrange
     password = "Abc1234!"
@@ -129,11 +129,11 @@ def test_password_exactly_8_characters() -> None:
 
 def test_password_empty() -> None:
     """
-    Test que verifica que una contraseña vacía es inválida.
+    Test that verifies that an empty password is invalid.
 
-    Dado: Una contraseña vacía ""
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser False
+    Given: An empty password ""
+    When: We validate the password
+    Then: The result should be False
     """
     # Arrange
     password = ""
@@ -147,11 +147,11 @@ def test_password_empty() -> None:
 
 def test_password_with_multiple_special_characters() -> None:
     """
-    Test que verifica que una contraseña con varios caracteres especiales es válida.
+    Test that verifies that a password with multiple special characters is valid.
 
-    Dado: Una contraseña "Abc123!@#" con múltiples caracteres especiales
-    Cuando: Validamos la contraseña
-    Entonces: El resultado debe ser True
+    Given: A password "Abc123!@#" with multiple special characters
+    When: We validate the password
+    Then: The result should be True
     """
     # Arrange
     password = "Abc123!@#"
